@@ -1,0 +1,129 @@
+/*
+ Theme Name:   Dev Test
+ Theme URI:    https://generatepress.com
+ Description:  Default GeneratePress child theme
+ Author:       Gleen Estemonio
+ Template:     generatepress
+ Version:      3.3.0
+*/
+
+*,
+*::after,
+*::before{
+box-sizing: border-box;
+}
+
+
+:root {
+  --dark: hsla(0, 0%, 0%, 1);
+  --dark-300: hsla(0, 0%, 13%, 1);
+  --gray: hsla(0, 0%, 44%, 1);
+  --gray-300: hsla(0, 0%, 49%, 1);
+  --red: hsla(342, 95%, 43%, 1);
+  
+  --mobile-fotn-weight: 300;
+
+  --h1: clamp(2.5rem, 2.5rem + 0vw, 2.5rem); /*--40px--*/
+  --h2: clamp(1.875rem, 1.875rem + 0vw, 1.875rem); /*--30px--*/
+  --team: clamp(1.563rem, 1.563rem + 0vw, 1.563rem); /*--25px--*/
+  --position: clamp(1.125rem, 1.125rem + 0vw, 1.125rem); /*--18px--*/
+}
+
+.home-slider-hero{margin-top: -17px;}
+
+/*--Sign In Nav-Button CSS*/
+.main-navigation .main-nav ul li.nav-button a {
+/*  background-color: #ffffff;
+  border: 2px solid #d70646; */
+  border: 2px solid var(--red);
+  color: var(--red);
+  line-height: 35px;
+  border-radius: 5px;
+  font-weight: 700;
+  margin-left: 20px;
+  text-align: center;
+  width: 125px;
+}
+
+/*Mobile Menu Slide Out BG CSS*/
+#generate-slideout-menu:before {
+position: absolute; 
+width: 100%;
+height: 100%;
+content:'';
+background-image: url('/wp-content/uploads/2023/06/copver-mobille-slide.png');
+background-color: var(--red);
+position: center center;
+background-size: cover;
+opacity: .2;
+}
+
+/*Mobile Menu Slide Out Button CSS*/
+.slideout-navigation .butt-right  {
+color: var(--red);
+}
+
+/*--GROUP TEAM*/
+.group-team a{ text-decoration: none;}
+
+/*MENU INDERLINE*/
+.main-navigation .main-nav > ul > li.current_page_item:after{
+position: absolute;
+content: '';
+width: 60%;
+left: 19%;
+height: 3px;
+background-color: var(--red);
+}
+
+/*MENU INDERLINE HOVER*/
+.main-navigation .main-nav > ul > li:hover:after{
+position: absolute;
+content: '';
+width: 60%;
+left: 19%;
+height: 3px;
+background-color: var(--red);
+}
+
+/*MENU REMOVE INDERLINE HOVER  LAST ITEM*/
+.main-navigation .main-nav > ul > li:last-child:after{
+display: none;
+
+}
+
+/**--- Mobile CSS Breakpoint ---**/
+
+@media (max-width: 768px){
+.home-slider-hero{margin-top: 0px;}
+    
+/*Mobile Menu inside Nav CSS*/
+.main-navigation.has-branding .inside-navigation.grid-container{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+/*Mobile Menu Hamburger Icon*/
+.gp-icon svg {
+height: 1.5em;
+width: 1.5em;
+	}
+	
+/*Hide the X toggle menu when open*/	
+.toggled .icon-menu-bars svg:nth-child(2){
+display: none;
+}
+
+/*Mobile Logo Height*/	
+.mobile-header-navigation .site-logo.mobile-header-logo img{
+height: 60px;
+	}	
+
+/*--home-slider-hero-text--*/
+div.gb-headline-6afcc5d0, div.gb-headline-c6edaf49{
+font-weight: var(--mobile-fotn-weight);
+    
+}
+
+	
+}
